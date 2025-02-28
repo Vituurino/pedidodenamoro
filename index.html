@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Especial 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #ffe4e1;
+        }
+        h1 {
+            color: #ff1493;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #32cd32;
+            color: white;
+        }
+        .no {
+            background-color: #ff0000;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer namorar comigo? 💖</h1>
+    <div class="buttons">
+        <button class="yes" onclick="responderSim()">Sim</button>
+        <button class="no" id="noButton" onmouseover="fugir()">Não</button>
+    </div>
+
+    <script>
+        function responderSim() {
+            alert("Ebaaa! Você fez a melhor escolha! 😍");
+        }
+
+        function fugir() {
+            let button = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
